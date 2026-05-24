@@ -2,11 +2,20 @@ package main
 
 import (
 	"fmt"
+	"log"
 
 	"github.com/CymonVersusAliceAndBob/golang_tutorial/greetings"
 )
 
 func main() {
-	message := greetings.Hello("Malcolm")
+	log.SetPrefix("greetings: ")
+	log.SetFlags(0)
+
+	message, err := greetings.Hello("")
+
+	if err != nil {
+		log.Fatal(err)
+	}
+
 	fmt.Println(message)
 }
