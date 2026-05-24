@@ -1,4 +1,4 @@
-module example/hello
+module github.com/CymonVersusAliceAndBob/golang_tutorial/hello
 
 go 1.26.3
 
